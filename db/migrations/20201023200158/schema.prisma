@@ -2,8 +2,8 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 datasource db {
-  provider = "postgres"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url = "***"
 }
 
 generator client {
@@ -51,8 +51,8 @@ model Team {
   updatedAt DateTime @updatedAt
   name      String   
   players   Player[] 
-  league    League?   @relation(fields: [leagueId], references: [id])
-  leagueId  Int?      
+  league    League   @relation(fields: [leagueId], references: [id])
+  leagueId  Int      
 }
 
 model Player {
@@ -60,7 +60,7 @@ model Player {
   createdAt  DateTime   @default(now())
   updatedAt  DateTime   @updatedAt
   name       String  
-  rlTrackerURL  String?   
-  team       Team?       @relation(fields: [teamId], references: [id])
-  teamId     Int?        
+  rlTrackerURL  String   
+  team       Team       @relation(fields: [teamId], references: [id])
+  teamId     Int        
 }

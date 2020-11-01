@@ -1,0 +1,35 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "Team",
+      "field": "league",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Team",
+      "field": "leagueId",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Player",
+      "field": "team",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Player",
+      "field": "teamId",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Player",
+      "field": "rlTrackerURL",
+      "arity": "Optional"
+    }
+  ]
+}
